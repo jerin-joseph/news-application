@@ -5,5 +5,16 @@
 </ion-header>
 
 <ion-content>
-All latest news will appear here...<br>
+
+<ion-card *ngFor="let article of data?.articles" (click)="goToNewsSinglePage(article)">
+  <ion-img [src]="article.urlToImage"> </ion-img>
+
+    <ion-card-content>
+      <ion-card-title> {{article.title}} </ion-card-title>
+      
+    </ion-card-content>
+</ion-card>
+
+
+
 </ion-content>
